@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- LINK JAVASCRIPT E CSS VÃO AQUI -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script> <!-- lembrar de usar defer -->
+
+  <title>Manipulação de DOM</title>
+</head>
+
+<body>
+
+  <header>
+    <h1>Manipulação de DOM</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Sem uso de eventos</h2>
+
+      <h3>Acessar elemento</h3>
+      <div id="acessar">
+        <p id="acessar-elemento-por-id">
+          Esse elemento pode ser acessado pelo id
+        </p>
+
+        <article class="acessar-elemento-por-classe">
+          Esse elemento pode ser acessado pela classe
+        </article>
+
+        <h5>
+          Esse elemento pode ser acessado pelo nome da tag
+        </h5>
+
+        <p id="acessar-elemento-por-seletor-id">
+          Esse elemento pode ser acessado pelo seletor: id</p>
+
+        <article class="acessar-elemento-por-seletor-classe">
+          Esse elemento pode ser acessado pelo seletor: classe
+        </article>
+      </div>
+
+      <h3>Criar e adicionar elemento</h3>
+      <div id="criar-adicionar"></div>
+
+      <h3>Remover elemento</h3>
+      <div id="remover">
+        <p id="remover-elemento">Esse elemento será removido</p>
+      </div>
+
+      <h3>Alterar elemento</h3>
+      <div id="alterar">
+        <p id="alterar-elemento">Esse elemento será alterado</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Com uso de eventos</h2>
+
+      <h3>onclick</h3>
+
+      <h4>Imprimir valor do input no console</h4>
+      <div>
+        <input type="text" id="input-imprimir">
+        <button id="imprimir" onclick="imprimir()">Imprimir</button>
+      </div>
+
+      <h4>Adicionar e remover elemento ao clicar no botão</h4>
+      <button id="adicionar" onclick="adicionar()">Adicionar</button>
+      <button id="remover" onclick="remover()">Remover</button>
+      <div id="adicionar-remover-elemento"></div>
+
+      <h3>onmouseout e onmouseover</h3>
+
+      <h4>Alterar cor ao passar e retirar o mouse</h4>
+      <div id="altera-cor" onmouseout="alterarCor('yellow')" onmouseover="alterarCor('blue')"></div>
+
+      <h3>addEventListener</h3>
+
+      <h4>Adicionar elemento na lista</h4>
+
+      <div>
+        <input type="text" id="input-adicionar">
+        <button id="adicionar-item">Adicionar</button>
+      </div>
+
+      <ul id="lista">
+        <li>Uva</li>
+        <li>Maçã</li>
+        <li>Abacaxi</li>
+      </ul>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Boilerplate simples para aula de Manipulação de DOM, desenvolvido por <a href="https://github.com/rosanarezende" target="_blank">Rosana Rezende</a>
+    </p>
+  </footer>
+
+  <!-- TAMBÉM POSSO COLOCAR O JS AQUI -->
+</body>
+
+</html>
