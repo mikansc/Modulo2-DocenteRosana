@@ -11,27 +11,35 @@
 
 <body>
   <main>
-    <div id="vanilla"></div>
+    <div id="vanilla">
+      <!-- js simples -->
+    </div>
 
-    <div id="react"></div>
+    <div id="react">
+      <!-- react simples -->
+    </div>
 
-    <div id="react-com-babel"></div>
+    <div id="react-com-babel">
+      <!-- react mais robusto -->
+    </div>
   </main>
 
 
   <!-- VANILLA -->
-
+  <script src="vanilla.js"></script>
 
 
   <!-- REACT -->
   <!-- importar REACT e REACTDOM: https://reactjs.org/docs/cdn-links.html -->
-
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="react.js"></script>
 
 
   <!-- REACT + BABEL -->
   <!-- importar BABEL: https://babeljs.io/setup#installation -->
-
-
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel" src="react-com-babel.js"></script>
 
 </body>
 
