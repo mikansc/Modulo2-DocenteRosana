@@ -1,20 +1,24 @@
-import './BusinessCard.css'
+import "./BusinessCard.css";
 
-export default function BusinessCard() {
+export default function BusinessCard({ url, name, email, phone }) {
   return (
     <div className="cartao-de-visita">
-      <img src="https://via.placeholder.com/150" alt="Foto" />
+      <img src={url} alt={name} />
       <div>
-        <h3>Fulano de tal</h3>
+        <h3>{name}</h3>
         <p>
           <span>E-mail: </span>
-          <a href="mailto:fulano@gmail.com">fulano@gmail.com</a>
+          <a href={`mailto:${email}`}>{email}</a>
         </p>
         <p>
           <span>Telefone: </span>
-          <a href="tel:11999999999">(11) 99999-9999</a>
+          <a href={`tel:${phone}`}>{phone}</a>
         </p>
       </div>
     </div>
   );
 }
+
+BusinessCard.defaultProps = {
+  url: "https://via.placeholder.com/150",
+};

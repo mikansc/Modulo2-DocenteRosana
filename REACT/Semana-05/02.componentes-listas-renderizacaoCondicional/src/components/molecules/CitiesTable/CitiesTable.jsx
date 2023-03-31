@@ -9,6 +9,7 @@ export default function CitiesTable() {
 
   return (
     <table>
+
       <thead>
         <tr>
           <th>Cidade</th>
@@ -16,12 +17,13 @@ export default function CitiesTable() {
           <th>Habitantes</th>
         </tr>
       </thead>
+
       <tbody>
-        {listaDeCidades.map((cidade) => (
-          <tr key={cidade.id}>
-            <td>{cidade.nome}</td>
-            <td>{cidade.estado}</td>
-            <td>{cidade.habitantes}</td>
+        {listaDeCidades.map((item) => (
+          <tr key={item.id}>
+            <td>{item.nome}</td>
+            <td>{item.estado}</td>
+            <td>{item.habitantes}</td>
           </tr>
         ))}
       </tbody>

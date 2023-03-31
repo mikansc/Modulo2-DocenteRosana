@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header>
       <img src={logo} alt="Logo React" />
-      <h1>Componentes React!</h1>
+      <h1 style={{ cor: "white" }}>Componentes React!</h1>
     </header>
   );
 }
