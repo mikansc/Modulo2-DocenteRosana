@@ -7,7 +7,7 @@ export default function ListRender() {
   const listaDeDoces = [
     { id: 1, nome: "Chocolate", marca: "Nestle" },
     { id: 2, nome: "Bala", marca: "Finni" },
-    { id: 3, nome: "Biscoito", marca: "xxx" },
+    { id: 3, nome: "Biscoito", marca: "Bauducco" },
   ];
 
   return (
