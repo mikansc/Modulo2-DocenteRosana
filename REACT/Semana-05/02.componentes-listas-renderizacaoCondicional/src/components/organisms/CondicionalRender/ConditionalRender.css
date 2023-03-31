@@ -1,0 +1,4 @@
+.lista-de-doces{
+  display: flex;
+  justify-content: space-around;
+}
