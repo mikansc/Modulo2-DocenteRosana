@@ -1,3 +1,10 @@
-export default function Button() {
-  return <button>Clique em mim!</button>
+import "./Button.css";
+
+export default function Button({ vermelho, children }) {
+
+  return (
+    <button className={vermelho ? "danger" : "default"}>
+      {children}
+    </button>
+  );
 }

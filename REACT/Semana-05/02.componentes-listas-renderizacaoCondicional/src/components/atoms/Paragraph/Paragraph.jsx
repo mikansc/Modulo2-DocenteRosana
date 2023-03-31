@@ -1,11 +1,9 @@
-// import { Button } from "../index";
+import "./Paragraph.css";
 
-export default function Paragraph() {
+export default function Paragraph({ children }) {
   return (
-    <p>
-      Sou um parágrafo
-      {/* Podemos usar componentes dentro de outros componentes */}
-      {/* <Button /> */}
+    <p className="meu-paragrafo">
+      {children}
     </p>
   );
 }
