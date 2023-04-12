@@ -1,6 +1,10 @@
 
-export function WelcomeMessage() {
-  return <p>fique à vontade!</p>
+export function WelcomeMessage({ name }) {
+  return (
+    <>
+      <p>{name} fique à vontade!</p>
+    </>
+  )
 }
 
 // CONTEXT API - HOOKS
