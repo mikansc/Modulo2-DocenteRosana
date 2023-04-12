@@ -1,0 +1,19 @@
+{
+  "cachorros" : [
+    {
+      "nome" : "Rex",
+      "idade" : 2,
+      "raca" : "Pitbull"
+    },
+    {
+      "nome" : "Bilu",
+      "idade" : 1,
+      "raca" : "Poodle"
+    },
+    {
+      "nome" : "Bob",
+      "idade" : 3,
+      "raca" : "Vira-lata"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useForm } from "hooks";
+import { useForm, useFormulario } from "hooks";
 
 /// sem custom hook =>  um state para cada campo
 // ver o arquivo Inputs.jsx
@@ -7,33 +7,25 @@ import { useForm } from "hooks";
 // sem custom hook =>  um state para o form inteiro
 // também tem exemplo de como usar o localStorage
 export const FormExample = () => {
-  const [formValues, setFormValues] = useState({ nome: "", mail: "" });
+  // const [formValues, setFormValues] = useState({ nome: "", mail: "" });
 
-  // Exemplo de como buscar dados do localStorage
-  // esse exemplo pode ser melhor implementado com useEffect
-  const meuForm = localStorage.getItem("meu-formulario-lindo");
-  const meuFormObj = JSON.parse(meuForm);
-  console.log(meuFormObj);
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   console.log(formValues);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(formValues);
+  //   setFormValues({ nome: "", mail: "" });
+  // };
 
-    // Exemplo de como salvar no localStorage
-    const formValuesString = JSON.stringify(formValues);
-    localStorage.setItem("meu-formulario-lindo", formValuesString);
+  // const changeForm = (event) => {
+  //   const { name, value } = event.target;
+  //   console.log(formValues);
 
-    setFormValues({ nome: "", mail: "" });
-  };
-
-  const changeForm = (event) => {
-    const { name, value } = event.target;
-    console.log(formValues);
-    setFormValues({
-      ...formValues,
-      [name]: value,
-    });
-  };
+  //   setFormValues({
+  //     ...formValues,
+  //     [name]: value,
+  //   });
+  // };
+  const [formValues, handleSubmit, changeForm] = useFormulario({ nome: "", mail: "", description: "" });
 
   return (
     <section>
@@ -42,15 +34,22 @@ export const FormExample = () => {
         <input
           type="text"
           placeholder="Nome"
-          value={formValues.name}
+          value={formValues.nome}
           name="nome"
           onChange={changeForm}
         />
         <input
           type="email"
           placeholder="Email"
-          value={formValues.email}
+          value={formValues.mail}
           name="mail"
+          onChange={changeForm}
+        />
+        <input
+          type="text"
+          placeholder="Description"
+          value={formValues.description}
+          name="description"
           onChange={changeForm}
         />
         <button type="submit">Enviar</button>

@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Text } from "components/atoms";
 import { Header } from "./components/molecules";
 import {
@@ -8,6 +9,22 @@ import {
 } from "./components/organisms";
 
 function App() {
+  // const [cachorros, setCachorros] = useState([]);
+  // console.log(cachorros);
+
+  // const fetchCachorros = async () => {
+  //   const resposta = await fetch('http://localhost:3003/cachorros');
+  //   const json = await resposta.json();
+  //   setCachorros(json);
+  // }
+
+  // useEffect(() => {
+  //   // fetch('http://localhost:3003/cachorros')
+  //   //   .then((response) => response.json())
+  //   //   .then((json) => setCachorros(json));
+  //   fetchCachorros();
+  // }, [])
+
   return (
     <>
       <Header />
@@ -15,7 +32,7 @@ function App() {
       <main>
         <Text subtitle="Custom Hooks" />
 
-        <Fetch3 />
+        <Fetch />
       </main>
     </>
   );
