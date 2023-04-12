@@ -5,12 +5,12 @@ header {
   padding: 10px 30px;
 }
 
-header.theme-white{
+header.theme-light{
   color: #213547;
   background-color: #5555;
 }
 
-header.theme-black{
+header.theme-dark{
   color: #ffffff;
   background-color: #242424;
 }
