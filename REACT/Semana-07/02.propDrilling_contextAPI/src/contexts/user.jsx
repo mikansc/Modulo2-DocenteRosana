@@ -7,9 +7,11 @@ export const UserProvider = ({ children }) => {
     id: 1,
     name: "Fulano de Tal",
     age: 36,
-  };
+  }
 
   return (
-    <UserContext.Provider value={{ user }}>{children}</UserContext.Provider>
-  );
-};
+    <UserContext.Provider value={{ user }}>
+      {children}
+    </UserContext.Provider>
+  )
+}
