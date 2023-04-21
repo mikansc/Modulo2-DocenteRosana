@@ -1,8 +1,20 @@
 // NoteContext.js - Contexto para gerenciar o estado global das anotações
+
 import { createContext, useContext } from 'react';
+import useNotes from '../hooks/notes';
 
-// NoteContext
+const NoteContext = createContext();
 
-// NoteProvider
+export const useNoteContext = () => useContext(NoteContext);
 
-// useNoteContext
+export const NoteProvider = ({ children }) => {
+  const noteStore = useNotes();
+
+  return (
+    <NoteContext.Provider value={{
+      ...noteStore,
+    }}>
+      {children}
+    </NoteContext.Provider>
+  );
+};
