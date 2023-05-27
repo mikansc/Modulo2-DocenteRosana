@@ -1,7 +1,12 @@
 import { NoteItem } from "./NoteItem";
 
 // Prop drilling: recebendo a propriedade deleteNote, mas não a está usando
-export const NoteList = ({ notes, deleteNote, handleNoteSelect, setSelectedNote }) => {
+export const NoteList = ({
+  notes,
+  deleteNote,
+  handleNoteSelect,
+  setSelectedNote,
+}) => {
   return (
     <div>
       <h2>Lista de Anotações</h2>
