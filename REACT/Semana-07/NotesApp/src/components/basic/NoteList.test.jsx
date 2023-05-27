@@ -51,4 +51,31 @@ describe("NoteList", () => {
     // ASSERT
     expect(funcaoSelectMock).toBeCalledWith(listaDeNotas[1]);
   });
+
+  test("quando clicar em 'Excluir', deve chamar as props deleteNote e setSelectedNote com os argumentos corretos", async () => {
+    // ARRANGE
+    const user = userEvent.setup();
+
+    const listaDeNotas = [
+      { id: 1, title: "nota 1", content: "conteúdo nota 1" },
+    ];
+    const deleteNoteMock = vi.fn();
+    const setSelectedMock = vi.fn();
+
+    render(
+      <NoteList
+        notes={listaDeNotas}
+        deleteNote={deleteNoteMock}
+        setSelectedNote={setSelectedMock}
+      />
+    );
+
+    const botoesSelect = screen.getAllByText(/Excluir/);
+
+    // ACT
+    await user.click(botoesSelect[0]);
+    // ASSERT
+    expect(deleteNoteMock).toBeCalledWith(listaDeNotas[0].id);
+    expect(setSelectedMock).toBeCalledWith(null);
+  });
 });
